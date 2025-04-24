@@ -1,0 +1,13 @@
+div {
+    box-sizing: border-box; /* tamaño de caja */
+    margin: 16px;
+    height: min-content;
+    width: min-content;
+    background: rgb(136, 151, 216);
+    font-size: 64px;
+    padding: 62px;
+    border: 40px solid rgb(38, 175, 70); 
+    border-width: 50px;
+    border-style: solid;
+    border-color: rgb(205, 195, 104);
+}

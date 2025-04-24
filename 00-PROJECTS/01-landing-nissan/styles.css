@@ -1,0 +1,355 @@
+body{
+    font-family: 'Roboto'; /*tipografia para las letras*/
+    margin:0
+}
+
+nav{
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 100;
+}
+
+/*selecion de elementos hijo*/
+nav>a{
+    max-width: 20vw;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+}
+
+main{
+    min-height: 95vh;
+}
+
+#section-1{
+    min-height: 45vh;
+    background-image: url("./assest/imagen-1.webp");/*imagen de fondo*/
+    background-repeat: no-repeat; /*no repetir imagen defondo*/
+    background-size: cover; /* tamañao del imagen de fondo
+    */
+    background-position: center;/*p*/
+    padding: 10px 20px;
+    position: relative;
+}
+
+#section-1 div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 30%;
+    color: white;
+}
+
+#section-1 div span{
+    
+    font-weight: 700;
+}
+
+#section-1 div h1{
+    font-size: 3vw;
+    margin: 0;
+}
+
+button{
+    margin-top: 15px;
+    border-style: none;
+    border-width: 0;
+    padding: 10px 20px;
+    color: white;
+    background-color: #c2002e;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #8c0524;
+}
+
+#slider{
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#section-2{
+    padding-top: 130px;
+    padding-left: 7vw;
+    padding-right: 7vw;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    
+}
+
+#section-2 div{
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+#section-2 div a{
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+}
+
+.destacado{
+    color: #c3002f !important;
+}
+
+#section-2 div a:hover{
+    color: #840825
+}
+
+#section-2 div span{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 700;
+    gap: 20px;
+    cursor: pointer;
+}
+
+#section-2 div span img{
+    width: 200px;
+}
+
+#section-2 div span:hover{
+    color: #c3002f;
+    scale: 1.1;
+}
+
+#car-container{
+    gap: 60px !important;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color:#eeeeee;
+    padding: 40px;
+    flex-direction: column;
+}
+
+.container h1{
+    font-size: 3vw;
+    margin: 0;
+    font-weight: 300;
+}
+
+.option-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-around !important;
+    align-items: center;
+}
+
+.option-container a{
+    text-align: center;
+}
+
+.option-container a:hover{
+    border-bottom: 1px solid #c2002e ;
+}
+
+#section-3{
+    padding-left: 7vw;
+    padding-right: 7vw;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#section-3 h1{
+    font-size: 4vw;
+    font-weight: 300;
+    width: 100%;
+}
+
+.container-noticias{
+    display: flex;
+    gap: 25px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.noticias{
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    gap: 20px;
+}
+
+.noticias span h1{
+    margin: 0;
+    font-size: 2vw !important;
+}
+
+.noticias span span{
+    font-weight: 700;
+}
+
+.noticias p span,a{
+    font-weight: 700;
+    color: #000;
+}
+
+.noticias p {
+    text-align: left;
+    font-weight: 200;
+    font-size: 15px;
+}
+
+.noticias button{
+    width: 40%;
+}
+
+#section-4{
+    padding-left: 7vw;
+    padding-right: 7vw;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+#titulos span{
+    font-weight: 700;
+}
+
+#titulos h1{
+    font-weight: 300;
+    font-size: 3vw;
+    margin: 0;
+}
+
+.experiencias-conteiner{
+    display: flex;
+    gap: 20px;
+}
+
+.experiencia{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.experiencia img{
+    width: 100%;
+}
+
+.experiencia span{
+    font-weight: 700;
+}
+
+.experiencia h1{
+    margin: 0;
+    font-weight: 300;
+}
+
+.experiencia a{
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.experiencia a:hover{
+    color: #8c0524;
+}
+
+
+.footer-2{
+    background-color: black;
+    padding: 25px 7vw;
+    color:#c1c1c1 ;
+    display: flex;
+    align-items: center;
+    
+}
+
+.container-footer{
+    display: flex;
+    min-width: 600px;
+    gap: 20px;
+    font-size: 12px;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.container-footer a{
+    color:#c1c1c1 ;
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.container-footer a:hover{
+    text-decoration: underline;
+}
+.container-footer p{
+    font-weight: 700;
+}
+
+
+.footer-1{
+    background-color: #1b1b1a;
+    padding: 25px 7vw;
+    display: flex;
+}
+
+.informacion-general{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    gap: 20px;
+}
+
+.informacion-general h6{
+    font-size: 20px;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+#politicas{
+    align-self: center;
+}
+.informacion-general p{
+    font-size: 15px;
+    font-weight: 300;
+    margin: 0;
+}
+
+.informacion-general div{
+    display: flex;
+    gap: 10px;
+}
+
+.menu-flotante{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    right: 0;
+}
+
+.menu-flotante  button{
+    margin: 0;
+    background-color: rgba(238, 238, 238, .95);
+    border-style: solid;
+    border-width: 1px;
+    border-right: none;
+    border-left: none;
+    border-top-color: white;
+    border-bottom-color: #d8d8d8;
+}
+
+.menu-flotante button:hover{
+    background-color: #c2002e;
+}

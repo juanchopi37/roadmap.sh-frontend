@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Un espacio de trabajo que conecta tus wikis, documentos ...</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Icono de pestaña -->
+    <link rel="shortcut icon" href="./assest/notion-icon.png" type="image/x-icon">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <!-- Estilos de CSS-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="global.css">
+</head>
+
+<body>
+    <!-- Header de la página -->
+    <header class="header">
+        <div class="logo">
+            <!-- Logo de Notion del Header tomado de la página original-->
+            <svg class="logo-notion" viewBox="0 0 105 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#a)">
+                    <mask id="b" width="29" height="30" x="0" y="0" maskUnits="userSpaceOnUse">
+                        <path fill="#fff" d="M28.714 0H0v29.995h28.714V0Z"></path>
+                    </mask>
+                    <g mask="url(#b)">
+                        <path fill="#fff"
+                            d="M1.805 1.29 18.403.069c2.038-.175 2.563-.057 3.844.873l5.298 3.724c.874.64 1.166.815 1.166 1.513v20.424c0 1.28-.467 2.037-2.097 2.153L7.34 29.919c-1.224.058-1.806-.116-2.447-.931L.99 23.925c-.7-.931-.99-1.628-.99-2.444V3.326c0-1.046.466-1.92 1.805-2.035Z">
+                        </path>
+                        <path class="wordmark_fill__RZFeq" fill="#000" fill-rule="evenodd"
+                            d="M18.403.068 1.805 1.291C.466 1.406 0 2.28 0 3.326v18.155c0 .816.29 1.513.99 2.444l3.902 5.063c.64.815 1.223.99 2.447.93l19.275-1.163c1.63-.116 2.097-.873 2.097-2.153V6.178c0-.662-.262-.853-1.034-1.416a89.567 89.567 0 0 1-.132-.097L22.247.941C20.966.011 20.44-.107 18.403.068ZM7.776 5.843c-1.574.106-1.931.13-2.825-.596L2.678 3.443c-.232-.233-.115-.524.467-.581l15.957-1.164c1.339-.117 2.038.35 2.562.756l2.737 1.979c.116.058.407.407.058.407l-16.48.99-.203.013ZM5.94 26.427V9.087c0-.756.233-1.105.932-1.164l18.926-1.105c.642-.058.933.35.933 1.105v17.223c0 .758-.117 1.398-1.166 1.456L7.455 27.65c-1.05.058-1.515-.29-1.515-1.223Zm17.88-16.41c.116.525 0 1.049-.526 1.108l-.872.174v12.8c-.758.408-1.457.64-2.039.64-.932 0-1.165-.29-1.864-1.163l-5.707-8.96v8.67l1.806.407s0 1.047-1.458 1.047l-4.017.233c-.117-.233 0-.815.408-.931l1.048-.29V12.287l-1.456-.117c-.116-.524.174-1.28.99-1.338l4.31-.29 5.94 9.077v-8.03l-1.514-.174c-.117-.641.349-1.107.931-1.164l4.02-.234Z"
+                            clip-rule="evenodd"></path>
+                    </g>
+                    <path class="wordmark_fill__RZFeq" fill="#000"
+                        d="M50.995 7.02V23.23h-2.587L40.739 12.14h-.134V23.23h-2.913V7.02h2.612l7.652 11.087h.15V7.021h2.89Zm7.715 16.446c-1.187 0-2.216-.261-3.087-.784a5.269 5.269 0 0 1-2.018-2.192c-.474-.939-.712-2.036-.712-3.292 0-1.256.237-2.356.712-3.3s1.148-1.678 2.018-2.2c.87-.522 1.9-.784 3.087-.784 1.182 0 2.208.262 3.078.784.87.522 1.544 1.256 2.018 2.2.48.944.72 2.044.72 3.3 0 1.256-.24 2.353-.72 3.292a5.269 5.269 0 0 1-2.018 2.193c-.87.522-1.896.783-3.078.783Zm.008-2.28c.654 0 1.197-.176 1.63-.53.433-.358.757-.838.973-1.44.217-.607.325-1.282.325-2.026 0-.744-.108-1.419-.325-2.026-.216-.607-.54-1.09-.973-1.448-.433-.364-.976-.546-1.63-.546-.66 0-1.209.182-1.646.546-.438.359-.765.841-.982 1.448-.21.607-.316 1.282-.316 2.026 0 .744.105 1.42.316 2.026.217.602.544 1.082.982 1.44.438.354.986.53 1.646.53ZM72.33 11.074v2.2h-6.964v-2.2h6.964ZM67.09 8.16h2.842v11.42c0 .385.058.68.174.887.121.205.28.345.475.419.195.074.414.11.657.11a2.8 2.8 0 0 0 .49-.039c.148-.026.264-.05.349-.071l.474 2.224a6.49 6.49 0 0 1-.648.174c-.28.063-.623.1-1.03.11-.712.022-1.355-.086-1.93-.324a3.04 3.04 0 0 1-1.361-1.116c-.333-.506-.496-1.142-.491-1.907V8.16Zm6.983 15.069V11.073h2.85v12.156h-2.85Zm1.433-13.89c-.454 0-.842-.15-1.164-.45a1.456 1.456 0 0 1-.483-1.093c0-.427.161-.791.483-1.092a1.645 1.645 0 0 1 1.163-.459c.454 0 .842.153 1.164.46.327.3.49.664.49 1.091 0 .422-.163.786-.49 1.092-.322.301-.71.452-1.163.452Zm8.99 14.127c-1.187 0-2.216-.261-3.087-.784a5.268 5.268 0 0 1-2.018-2.192c-.474-.939-.712-2.036-.712-3.292 0-1.256.238-2.356.712-3.3.475-.944 1.148-1.678 2.018-2.2.871-.522 1.9-.784 3.087-.784 1.182 0 2.208.262 3.078.784.871.522 1.544 1.256 2.019 2.2.48.944.72 2.044.72 3.3 0 1.256-.24 2.353-.72 3.292a5.267 5.267 0 0 1-2.019 2.193c-.87.522-1.896.783-3.078.783Zm.008-2.28c.654 0 1.197-.176 1.63-.53.433-.358.757-.838.974-1.44.216-.607.324-1.282.324-2.026 0-.744-.108-1.419-.324-2.026-.217-.607-.541-1.09-.974-1.448-.433-.364-.976-.546-1.63-.546-.66 0-1.208.182-1.646.546-.438.359-.765.841-.982 1.448-.21.607-.316 1.282-.316 2.026 0 .744.105 1.42.316 2.026.217.602.544 1.082.982 1.44.438.354.986.53 1.646.53Zm10.406-5.088v7.13h-2.848V11.074h2.722v2.057h.143a3.48 3.48 0 0 1 1.337-1.614c.617-.401 1.38-.602 2.288-.602.833 0 1.561.18 2.184.539a3.63 3.63 0 0 1 1.456 1.559c.348.68.522 1.506.522 2.477v7.74h-2.84v-7.305c0-.813-.212-1.448-.634-1.907-.423-.464-1.006-.697-1.75-.697-.5 0-.946.111-1.337.333-.39.216-.696.532-.918.95-.216.41-.325.91-.325 1.495Z">
+                    </path>
+                </g>
+                <defs>
+                    <clipPath id="a">
+                        <path fill="#fff" d="M0 0h104.229v30H0z"></path>
+                    </clipPath>
+                </defs>
+            </svg>
+        </div>
+        <!-- Menún de navegación -->
+        <nav class="menu-navegacion">
+            <div class="left-items-header">
+                <div><a href="">Producto</a></div>
+                <div><a href="">Equipos</a></div>
+                <div><a href="">Personas</a></div>
+                <div><a href="">Descargar</a></div>
+                <div><a href="">Precios</a></div>
+            </div>
+            <div class="right-items-header">
+                <div>
+                    <a href="">Solicita una demo</a>
+                </div>
+                <div>
+                    <a href="">Iniciar sesión</a>
+                </div>
+                <div>
+                    <button>Obtén Notion gratis</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Contenedor principal-->
+    <main class="main-container">
+        <!-- Secciones principales del contenedor -->
+        <div class="main-section">
+            <div class="section-1">
+                <div id="titulos-principales">
+                    <h1 id="title-1">El espacio de trabajo más feliz</h1>
+                    <h2>Escribe, planifica y colabora con la ayuda de la IA.</h2>
+                </div>
+                <!-- Botones de acción -->
+                <div class="button1">
+                    <button class="obtener-notion">Obtén Notion gratis</button>
+                    <button class="solicitar-demo">Solicita una demo</button>
+                </div>
+                <!-- Logos de las organizaciones que usan Notion -->
+                <div class="teams-work-notion">
+                    <p>Equipos que eligen Notion:</p>
+                    <div>
+                        <img src="./assest/toyota-color.svg" alt="Toyota">
+                        <img src="./assest/vercel.svg" alt="Vercel">
+                        <img src="./assest/figma-color.svg" alt="Figma">
+                        <img src="./assest/ramp.svg" alt="Ramp">
+                    </div>
+                </div>
+            </div>
+            <!-- Video de introducción-->
+            <div id="video">
+                <video id="video-inicial" src="assest/hero-illustration.mp4" autoplay muted></video>
+            </div>
+        </div>
+        <!-- Carrucel de fotos de notion -->
+        <div id="carrucel-fotos">
+            <div id="carouselExampleDark" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- Carousel Items -->
+                    <div class="carousel-item active" data-bs-interval="2000">
+                        <div class="carousel-image-wrapper">
+                            <img src="./assest/wikis.png" class="d-block w-100" alt="Wikis">
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <div class="carousel-image-wrapper">
+                            <img src="./assest/documents.png" class="d-block w-100" alt="Documents">
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <div class="carousel-image-wrapper">
+                            <img src="./assest/ia.png" class="d-block w-100" alt="Projects">
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <div class="carousel-image-wrapper">
+                            <img src="./assest/calendar.png" class="d-block w-100" alt="Calendar">
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <div class="carousel-image-wrapper">
+                            <img src="./assest/ia.png" class="d-block w-100" alt="IA">
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <div class="carousel-image-wrapper">
+                            <img src="./assest/sites.avif" class="d-block w-100" alt="Sites">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Botones que permiten controlar  el carrusel en base a la imagen o sección(SVGs tomados de la pagina original) -->
+        <div class="button-container">
+            <div class="botones-carousel">
+                <button class="carousel-control-button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0">
+                    <div class="elements">
+                        <svg class="bookOpen" viewBox="0 0 48 48" width="22px" height="22px"
+                            style="width: 22px; height: 22px; display: block; fill: inherit; flex-shrink: 0; padding-right: 2px;">
+                            <path
+                                d="M21 40.86H6.09c-1.08 0-1.98-.9-1.98-1.98V20.22c0-1.17.6-1.83 1.74-1.83h.9v-3.36H4.89c-2.49 0-4.5 2.01-4.5 4.5v20.25c0 2.49 2.01 4.5 4.5 4.5H21v-3.42ZM43.14 15h-1.86v3.36h.99c1.08 0 1.62.63 1.62 1.62v18.93c0 1.08-.87 1.98-1.98 1.98H27v3.36h16.14c2.49 0 4.5-2.01 4.5-4.5V19.5c0-2.49-2.01-4.5-4.5-4.5Z"
+                                fill="currentColor"></path>
+                            <path
+                                d="M39.39 4.5c-5.19.69-11.4 2.73-15.36 5.16-3.99-2.43-10.2-4.47-15.36-5.16v30.75c4.26.51 8.67 1.5 13.14 3.24l2.25.99 2.25-.99c4.47-1.74 8.88-2.76 13.14-3.24V4.5h-.06ZM13.14 31.89V9.69c3.21.57 6.93 2.01 8.64 3.39v21.24c-2.49-1.02-5.97-1.95-8.64-2.43Zm21.75 0c-2.64.48-6.15 1.41-8.64 2.43V13.08c1.68-1.41 5.43-2.82 8.64-3.39v22.2Z"
+                                fill="currentColor"></path>
+                        </svg>
+                        <p>Wikis</p>
+                    </div>
+                </button>
+                <button class="carousel-control-button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1">
+                    <div class="elements">
+                        <svg class="doc" viewBox="0 0 49 49" width="10px" height="10px"
+                            style="width: 22px; height: 22px; display: block; fill: inherit; flex-shrink: 0; padding-right: 2px;">
+                            <path
+                                d="m40.22 14.512-12.33-9.99c-.72-.6-1.65-.93-2.61-.93H11.36c-2.28 0-4.11 1.83-4.11 4.11v33.78c0 2.28 1.86 4.11 4.11 4.11h26.28c2.28 0 4.11-1.83 4.11-4.11v-23.76c0-1.23-.57-2.43-1.53-3.21Zm-13.11-6.81 10.38 9.06c.42.36.18 1.05-.39 1.05h-8.88c-.6 0-1.11-.48-1.11-1.11v-9Zm8.85 33.75H13.01c-.69 0-1.26-.57-1.26-1.29v-31.2c0-.69.57-1.26 1.26-1.26h10.35v10.14c0 2.07 1.68 3.75 3.75 3.75h10.11v18.6c0 .69-.57 1.26-1.26 1.26Z"
+                                fill="currentColor"></path>
+                            <path d="M17.75 27.232h13.5M17.75 34.402h13.5" stroke="currentColor" stroke-width="1.824"
+                                stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                        <p>Documents</p>
+                    </div>
+                </button>
+                <button class="carousel-control-button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2">
+                    <div class="elements">
+                        <svg height="22px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="22px"
+                            class="NotionIconSvgWrapper_icon__In1uC">
+                            <defs fill="currentColor"></defs>
+                            <path
+                                d="m36,32c0,2.21-1.79,4-4,4s-4-1.79-4-4,1.79-4,4-4,4,1.79,4,4Zm20,0c0,13.25-10.75,24-24,24s-24-10.75-24-24,10.75-24,24-24,24,10.75,24,24Zm-6,0c0-9.94-8.06-18-18-18s-18,8.06-18,18,8.06,18,18,18,18-8.06,18-18Zm-4,0c0,7.73-6.27,14-14,14s-14-6.27-14-14,6.27-14,14-14,14,6.27,14,14Zm-6,0c0-4.42-3.58-8-8-8s-8,3.58-8,8,3.58,8,8,8,8-3.58,8-8Z"
+                                fill="currentColor"></path>
+                        </svg>
+                        <p>Projects</p>
+                    </div>
+                </button>
+                <button class="carousel-control-button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3">
+                    <div class="elements">
+                        <svg height="22px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="22px"
+                            class="NotionIconSvgWrapper_icon__In1uC">
+                            <defs fill="currentColor"></defs>
+                            <path d="m48,12v-6h-6v6h-20v-6h-6v6h-8v40h48V12h-8Zm2,35H14v-19h36v19Z" fill="currentColor">
+                            </path>
+                        </svg>
+                        <p>Calendar</p>
+                    </div>
+                </button>
+                <button class="carousel-control-button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4">
+                    <div class="elements">
+                        <svg class="assistantFace" viewBox="0 0 20 20" width="22px" height="22px"
+                            style="width: 22px; height: 22px; display: block; fill: inherit; flex-shrink: 0;">
+                            <path fill="currentColor" stroke="currentColor"
+                                d="M13.91 8.861a.75.75 0 1 1-1.48-.24.75.75 0 0 1 1.48.24ZM7.321 7.793a.75.75 0 1 1-1.48-.24.75.75 0 0 1 1.48.24Z">
+                            </path>
+                            <path stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="1.5"
+                                d="M17.233 5.656a3.493 3.493 0 0 0-6.012-.031L4.99 16.027l5.412.877M9.47 3.935a3.494 3.494 0 0 0-4.969-.317">
+                            </path>
+                        </svg>
+                        <p>IA</p>
+                    </div>
+                </button>
+                <button class="carousel-control-button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5">
+                    <div class="elements">
+                        <svg height="22px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="22px"
+                            class="NotionIconSvgWrapper_icon__In1uC">
+                            <defs fill="currentColor"></defs>
+                            <path
+                                d="m32,8c-13.25,0-24,10.75-24,24s10.75,24,24,24,24-10.75,24-24-10.75-24-24-24Zm14.96,14h-4.98c-.47-2.21-1.11-4.27-1.91-6.07,2.78,1.4,5.16,3.49,6.88,6.07Zm-10.86,0h-8.21c1.9-8.86,6.31-8.86,8.21,0Zm-21.64,14c-.29-1.29-.46-2.62-.46-4s.17-2.71.46-4h6.7c-.1,1.32-.16,2.66-.16,4s.05,2.68.16,4h-6.7Zm2.57,6h4.98c.47,2.21,1.11,4.27,1.91,6.07-2.78-1.4-5.16-3.49-6.88-6.07Zm4.98-20h-4.98c1.72-2.57,4.1-4.66,6.88-6.07-.8,1.8-1.43,3.86-1.91,6.07Zm5.88,20h8.21c-1.9,8.86-6.31,8.86-8.21,0Zm8.99-6h-9.76c-.08-1.24-.12-2.57-.12-4s.04-2.76.12-4h9.76c.08,1.24.12,2.57.12,4s-.04,2.76-.12,4Zm3.2,12.07c.8-1.8,1.43-3.86,1.91-6.07h4.98c-1.72,2.57-4.1,4.66-6.88,6.07Zm2.76-12.07c.1-1.32.16-2.66.16-4s-.05-2.68-.16-4h6.7c.29,1.29.46,2.62.46,4s-.17,2.71-.46,4h-6.7Z"
+                                fill="currentColor"></path>
+                        </svg>
+                        <p>Sites</p>
+                    </div>
+                </button>
+            </div>
+        </div>
+        <!-- Section 2: Colaboración con equipos-->
+        <section class="section-2">
+            <div class="cabecera">
+                <div id="left-items">
+                    <h1>Crea documentos perfectos en equipo</h1>
+                    <p>Registra tus ideas, recibe sugerencias de tu equipo y pídele a la IA que se encargue de los
+                        detalles finales.</p>
+                    <a href="">Explora los documentos y notas →</a>
+                </div>
+                <div id="right-items">
+                    <ul>
+                        <li>
+                            <video src="assest/write-building-blocks.mp4" autoplay muted></video>
+                            <div>
+                                <span id="black">Bloques de contenido</span>
+                                <span id="gray">Más de 100 tipos de contenido para comunicar tus ideas.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <video src="assest/write-collaboration.mp4" autoplay muted></video>
+                            <div>
+                                <span id="black">Herramientas colaborativas</span>
+                                <span id="gray">Diseñado para que los equipos compartan, sugieran y comenten.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <video src="assest/write-ai.mp4" autoplay muted></video>
+                            <div>
+                                <span id="black">IA integrada</span>
+                                <span id="gray">Edita, redacta y traduce. Pide lo que quieras y la IA te ayudará.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="video-1">
+                <div>
+                    <video src="assest/write-screen-desktop.mp4" autoplay muted></video>
+                </div>
+            </div>
+            <footer class="footer-section">
+                <div id="icons-footer">
+                    <h4>Remplaza a</h4>
+                    <ul>
+                        <li>
+                            <img src="assest/evernote.svg" alt="">
+                            <span>Evernote</span>
+                        </li>
+                        <li>
+                            <img src="assest/gdocs.svg" alt="">
+                            <span>Google Docs</span>
+                        </li>
+                        <li>
+                            <img src="assest/coda.svg" alt="">
+                            <span>Coda</span>
+                        </li>
+                    </ul>
+                </div>
+            </footer>
+        </section>
+        <!-- Section 3: Flujos de trabajo con Notion -->
+        <section class="section-2">
+            <div class="cabecera">
+                <div id="left-items">
+                    <h1>Dale forma a tus flujos de trabajo</h1>
+                    <p>Todos tus proyectos, objetivos, calendarios, hojas de ruta y mucho más en una sola herramienta, adaptada a tu forma de trabajar y a la de tu equipo.</p>
+                    <a href="">Explora los proyectos →</a>
+                </div>
+                <div id="right-items">
+                    <ul>
+                        <li>
+                            <video src="assest/plan-todos.mp4" autoplay muted></video>
+                            <div>
+                                <span id="black">Tareas y pendientes</span>
+                                <span id="gray">Aborda cualquier proyecto, ya sea grande o pequeño.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <video src="assest/plan-customizable.mp4" autoplay muted></video>
+                            <div>
+                                <span id="black">Vistas personalizadas</span>
+                                <span id="gray">Visualiza el trabajo en distintos formatos, desde calendarios hasta tableros.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <video src="assest/plan-automations.mp4" autoplay muted></video>
+                            <div>
+                                <span id="black">Automatizaciones</span>
+                                <span id="gray">Pon las tareas tediosas en piloto automático.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="video-1">
+                <div>
+                    <video src="assest/plan-screen-desktop.mp4" autoplay muted></video>
+                </div>
+            </div>
+            <footer class="footer-section">
+                <div id="icons-footer">
+                    <h4>Remplaza a</h4>
+                    <ul>
+                        <li>
+                            <img src="assest/trello.svg" alt="">
+                            <span>Trello</span>
+                        </li>
+                        <li>
+                            <img src="assest/asana.svg" alt="">
+                            <span>Asana</span>
+                        </li>
+                        <li>
+                            <img src="assest/monday.svg" alt="">
+                            <span>Lunes</span>
+                        </li>
+                    </ul>
+                </div>
+            </footer>
+        </section>
+        <!-- Section 4: Manejo del conocimiento con Notion -->
+        <section class="section-2">
+            <div class="cabecera">
+                <div id="left-items">
+                    <h1>Encuentra todo al instante</h1>
+                    <p>Se acabaron las búsquedas eternas. Nuestra IA integrada encuentra lo que necesites, sin importar si está en Notion o en tus otras apps.</p>
+                    <a href="">Explora la gestión  de conocimientos →</a>
+                </div>
+                <div id="right-items">
+                    <ul>
+                        <li>
+                            <video src="assest/organize-teamspaces.mp4" autoplay muted></video>
+                            <div>
+                                <span id="black">Espacios de equipo</span>
+                                <span id="gray">Espacios exclusivos para cada equipo y proyecto.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <video src="assest/organize-integrations.mp4" autoplay muted></video>
+                            <div>
+                                <span id="black">Integraciones</span>
+                                <span id="gray">Conecta todas tus otras herramientas.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <video src="assest/organize-ai.mp4" autoplay muted></video>
+                            <div>
+                                <span id="black">Pregúntale a la IA</span>
+                                <span id="gray">Respuestas certeras de todas tus apps.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="video-1">
+                <div>
+                    <video src="assest/organize-screen-desktop.mp4" autoplay muted></video>
+                </div>
+            </div>
+            <footer class="footer-section">
+                <div id="icons-footer">
+                    <h4>Remplaza a</h4>
+                    <ul>
+                        <li>
+                            <img src="assest/confluence.avif" alt="">
+                            <span>Confluence</span>
+                        </li>
+                        <li>
+                            <img src="assest/sharepoint.avif" alt="">
+                            <span>SharePoint</span>
+                        </li>
+                        <li>
+                            <img src="assest/google-drive.svg" alt="">
+                            <span>Google Drive</span>
+                        </li>
+                    </ul>
+                </div>
+            </footer>
+        </section>
+        <!-- Section 5: Integración de la IA en Notion-->
+        <section class="quote">
+            <figure>
+                <blockquote>
+                    <img src="assest/pin.png" alt="">
+                    "La app para hacerlo todo, ahora con IA"
+                </blockquote>
+                <figcaption>
+                    <img src="assest/forbes.avif" alt="Forbes">
+                </figcaption>
+            </figure>
+        </section>
+        <section class="section-2">
+            <div class="cabecera">
+                <div id="left-items">
+                    <h1>Potencia tus ideas</h1>
+                    <p>La IA de Notion está integrada a tu espacio de trabajo, siempre lista para sugerirte ideas, sintetizar, redactar o buscar lo que necesitas.</p>
+                    <a href="">Prueba la IA de Notion →</a>
+                </div>
+                <div id="right-items">
+                    <ul>
+                        <li>
+                            <video src="assest/ai-answers.mp4" autoplay muted></video>
+                            <div>
+                                <span id="black">Respuestas instantáneas</span>
+                                <span id="gray">Pregunta lo que quieras sobre documentos y proyectos de cualquier equipo.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <video src="assest/ai-editor.mp4" autoplay muted></video>
+                            <div>
+                                <span id="black">Editor personalizado</span>
+                                <span id="gray">Genera contenido que sea siempre relevante.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <video src="assest/ai-connectors.mp4" autoplay muted></video>
+                            <div>
+                                <span id="black">Conexiones de la IA beta</span>
+                                <span id="gray">Accede a información de Slack, Google Drive y más, sin salir de Notion.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="video-1">
+                <div>
+                    <video src="assest/ai-screen-desktop.mp4" autoplay muted></video>
+                </div>
+            </div>
+        </section>
+        <!-- Section 6: Vista de funcionalidades de Notion-->
+        <section class="section-4">
+            <header>
+                <h1>Todo lo que necesitas para obtener los mejores resultados</h1>
+            </header>
+            <div>
+                <ul>
+                    <li>
+                        <img src="assest/docsStacked.avif" alt="">
+                        <span>
+                            <h4>Documentos →</h4>
+                            <p>Crea cualquier página y comunica todas tus ideas.</p>
+                        </span>
+                    </li>
+                    <li>
+                        <img src="assest/bookFlat.avif" alt="">
+                        <span>
+                            <h4>Wiki →</h4>
+                            <p>Un centro para todo tu conocimiento.</p>
+                        </span>
+                    </li>
+                    <li>
+                        <img src="assest/docsStacked.avif" alt="">
+                        <span>
+                            <h4>Proyectos →</h4>
+                            <p>Gestiona cualquier proyecto de principio a fin.</p>
+                        </span>
+                    </li>
+                    <li>
+                        <img src="assest/ia-final.png" alt="">
+                        <span>
+                            <h4>IA de Notion →</h4>
+                            <p>No importa qué quieras buscar o hacer, la IA puede ayudarte.</p>
+                        </span>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <img src="assest/notionCalendarLogo.avif" alt="">
+                        <span>
+                            <h4>Calendario →</h4>
+                            <p>Consulta todos tus eventos en un solo lugar.</p>
+                        </span>
+                    </li>
+                    <li>
+                        <img src="assest/trophy.avif" alt="">
+                        <span>
+                            <h4>Objetivos →</h4>
+                            <p>Controla el progreso de tus objetios más importantes.</p>
+                        </span>
+                    </li>
+                    <li>
+                        <img src="assest/globe.avif" alt="">
+                        <span>
+                            <h4>Sites →</h4>
+                            <p>Convierte cualquier página en un sitio web en minutos.</p>
+                        </span>
+                    </li>
+                    <li>
+                        <img src="assest/shapes1.avif" alt="">
+                        <span>
+                            <h4>Plantillas →</h4>
+                            <p>Da tu primeros pasos con una de las mas de 30 000 plantillas</p>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- Section 7: Section para optener Notion y Notion Calendar -->
+        <section class="section-5">
+            <header>
+                <h1>Empieza hoy</h1>
+            </header>
+            <div class="container">
+                <div class="left-div">
+                    <h1>Notion</h1>
+                    <button id="azul-oscuro">Pruébalo gratis</button>
+                    <button id="azul-claro">Descárgalo ahora</button>
+                    <img src="assest/notion-app.avif" alt="">
+                </div>
+                <div class="right-div">
+                    <h1>Notion Calendar</h1>
+                    <button id="azul-oscuro">Pruébalo gratis</button>
+                    <button id="azul-claro">Descárgalo ahora</button>
+                    <img src="assest/notion-calendar.avif" alt="">
+                </div>
+            </div>
+        </section> 
+    </main>
+    <!-- Footer hecho con Figma Link del proyecto en Figma: https://www.figma.com/design/UtoLMMHiRBwWIvAA2LsfU1/Footer-Notion?node-id=0-1&t=q24aWikWdR5RmI84-1  -->
+    <div class="plugin-file-cover-1">
+        <div class="plugin-file-cover-1-child">
+        </div>
+        <div class="rectangle-parent">
+            <div class="group-child">
+            </div>
+            <div class="no-vendemos-ni">No vendemos ni compartimos tus datos personales</div>
+            <img class="clip-path-group" alt="" src="assest/notion-logo-footer.svg">
+            <div class="group-parent">
+                <img class="group-icon" alt="" src="assest/instagram.svg">
+                <img class="group-icon1" alt="" src="assest/x.svg">
+                <img class="group-icon2" alt="" src="assest/linkedin.svg">
+                <img class="group-icon" alt="" src="assest/facebook.svg">
+                <img class="group-icon" alt="" src="assest/youtube.svg">
+            </div>
+            <!-- Boton desplegable para seleccionar idioma -->
+            <div class="language-selector">
+                <select>
+                    <option>Español (Latinoamérica)</option>
+                    <option>English</option>
+                    <option>Français</option>
+                    <option>Deutsch</option>
+                </select>
+            </div>
+        </div>
+        <div class="rectangle-group">
+            <div class="group-item">
+            </div>
+            <div class="group-inner">
+            </div>
+            <div class="enterprise">Enterprise</div>
+            <div class="descubre-ms">Descubre más →</div>
+            <div class="notion-para">Notion para</div>
+            <div class="pequea-empresa">Pequeña empresa</div>
+            <div class="personal">Personal</div>
+            <div class="rectangle-div">
+            </div>
+            <div class="centro-de-ayuda">Centro de ayuda</div>
+            <div class="integraciones">Integraciones</div>
+            <div class="plantillas">Plantillas</div>
+            <div class="afiliados">Afiliados</div>
+            <div class="recursos">Recursos</div>
+            <div class="precios">Precios</div>
+            <div class="comunidad">Comunidad</div>
+            <div class="blog">Blog</div>
+            <div class="group-child1">
+            </div>
+            <div class="ios-y-android">iOS y Android</div>
+            <div class="descargar">Descargar</div>
+            <div class="mac-y-windows">Mac y Windows</div>
+            <div class="web-clipper">Web Clipper</div>
+            <div class="calendario">Calendario</div>
+            <div class="group-child2">
+            </div>
+            <div class="concenos">Conócenos</div>
+            <div class="trminos-de-uso">Términos de uso y privacidad</div>
+            <div class="empresa">Empresa</div>
+            <div class="oportunidades-laborales">Oportunidades laborales</div>
+            <div class="estado">Estado</div>
+            <div class="seguridad">Seguridad</div>
+        </div>
+        <div class="notion-labs-inc">© 2025 Notion Labs, Inc.</div>
+        <div class="configuracin-de-cookies">Configuración de cookies</div>
+    </div>
+    <!-- Aquí termina la sección que fue hecha con Figma -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!-- Intersection Observer API permite reproduccir los videos al hacer scroll -->
+    <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const videos = document.querySelectorAll("video");
+            
+                const options = {
+                    root: null,
+                    rootMargin: "0px",
+                    threshold: 0.5
+                };
+            
+                const callback = (entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.play();
+                        } else {
+                            entry.target.pause();
+                        }
+                    });
+                };
+            
+                const observer = new IntersectionObserver(callback, options);
+            
+                videos.forEach(video => {
+                    observer.observe(video);
+                });
+            });
+    </script>
+</body>
+
+</html>

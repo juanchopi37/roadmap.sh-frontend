@@ -1,0 +1,33 @@
+/*
+mobile: 0px 
+tablet 599px
+desktop 900px
+
+*/
+
+
+
+
+
+body{
+    background-color: blanchedalmond;
+    margin: 0;
+    min-height: 100vh;
+}
+
+@media screen and (min-width: 400px){
+    body{
+        background-color: rgb(109, 109, 190);
+    }
+}
+
+#imagen{
+    height: auto;
+    width: 100;
+
+}
+@media screen and (min-width: 600px){
+    body{
+        background-color: rgb(210, 105, 105);
+    }
+}

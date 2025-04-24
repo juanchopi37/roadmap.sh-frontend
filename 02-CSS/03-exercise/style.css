@@ -1,0 +1,60 @@
+body{
+    font-family: 'Roboto'; /* tipografia para las letras */
+    margin: 0;
+}
+
+nav{
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    padding-top: 10px;
+    padding-right: 10px;
+    width: 100%;
+    position: absolute;
+}
+
+/* selecion de elementos hijo */
+nav>a{
+    max-width: 100px;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+}
+
+main{
+    min-height: 95vh;
+}
+
+#section-1{
+    min-height: 40vh;
+    background-image: url("./assest/imagen-1.webp"); /* imagen de fondo */
+    background-repeat: no-repeat; /* no repetir imagen de fondo */
+    background-size: cover; /* tamaño del imagen de fondo */
+    background-position: center; /* p */
+    padding: 10px 20px;
+}
+#section-1>div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 30%;
+}
+
+#section-1>div>span{
+    color: white;
+    font-weight: 700;
+}
+
+#section-1>div>h1{
+    color: white;
+    font-size: 3vw;
+    margin: 0;
+}
+#section-1>div>button{
+    margin-top: 15px;
+    border-style: none;
+    border-width: 0;
+    padding: 10px 20px;
+    color: white;
+    background-color: #c2002e;
+}

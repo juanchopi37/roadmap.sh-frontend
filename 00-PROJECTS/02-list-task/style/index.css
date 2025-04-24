@@ -1,0 +1,14 @@
+body {
+    min-height: 100vh;
+    background-color: #d2dbe0;
+    font-family: 'Poppins', sans-serif;
+}
+
+#ppal {
+    background-color: #ffff;
+}
+
+.table-success{
+    --bs-table-bg:#dce7ec;
+    --bs-table-striped-bg: #c2e1f0
+}

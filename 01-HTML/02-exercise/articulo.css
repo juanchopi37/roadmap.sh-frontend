@@ -1,0 +1,41 @@
+body{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: justify;
+    background-color: aliceblue;
+    align-items: center;
+    padding: 20px;
+
+
+}
+
+h1{
+    font-size: 2vw;
+}
+
+p{
+    font-size: 1vw;
+}
+
+#contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 600px){
+    body{
+        flex-direction: column;
+    }
+
+    h1{
+        font-size: 5vw;
+    }
+    p{
+        font-size: 3vw;
+    }
+    
+
+}

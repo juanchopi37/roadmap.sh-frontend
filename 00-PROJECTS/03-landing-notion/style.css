@@ -1,0 +1,1066 @@
+/* Estilos del Header */
+.header {
+    display: flex;              
+    margin: 0;                  
+    padding: 0;                 
+    background-color: white;    
+    width: 100%;               
+    height: auto;              
+    justify-content: flex-start;
+    position: fixed;  
+    top: 0;                    
+    z-index: 1000;            
+}
+
+.header .logo-notion {
+    margin-top: 16px;
+    margin-left: 9px;
+    margin-right: 28px;
+    width: 90px;             
+}
+
+#Notion-header {
+    display: flex;            
+    background-size: cover;   
+    flex-direction: row;      
+    justify-content: flex-start;
+}
+
+/* Estilos del Menú de Navegación */
+.menu-navegacion {
+    display: flex;            
+    justify-content: space-between; 
+    width: 100%;             
+}
+
+.left-items-header, .right-items-header {
+    display: flex;  
+    margin-top: 2px;           
+}
+
+.left-items-header > div > a, .right-items-header > div > a {
+    display: flex;              
+    text-align: center;         
+    text-decoration: none;      
+    color: black;               
+    font-size: 15px;           
+    margin: 10px;              
+    align-items: center;   
+    padding: 5px;  
+    padding-left: 3px;   
+    padding-right: 3px;
+    border-radius: 5px;
+}
+
+.left-items-header > div > a:hover, .right-items-header > div > a:hover {
+    background-color: #f2f2f2;
+    border-radius: 5%;
+}
+
+.right-items-header > div {
+    display: flex; 
+    margin-right: 16px;
+    margin-top: 4px;             
+}
+
+.right-items-header > div > button {
+    background-color: #191918; 
+    color: white;  
+    font-size: 14px;            
+    font-weight: 600;          
+    border-radius: 5px;  
+    margin: 5px;  
+    margin-top: 12px;     
+    padding: 0;           
+    height: 30px; 
+    width: 150px;                           
+    cursor: pointer;           
+    border: none;              
+}
+
+.right-items-header > div > button:hover {
+    background-color: #31302e; 
+}
+
+/* Estilos del Contenido Principal */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 17vw;          
+    padding-right: 17vw;         
+    padding-top: 70px;          
+}
+
+.main-section {
+    display: flex;
+    flex-direction: row;               
+    justify-content: flex-start;         
+    align-items: flex-end; 
+}
+
+.section-1 > #titulos-principales {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 600px;
+}
+
+.main-container #title-1 {
+    font-size: 75.5px !important;
+    font-weight: 650;
+    line-height: 1;
+    margin: 0;     
+    color: #191918;            
+    max-width: 400px;          
+    text-wrap: wrap;           
+}
+
+.main-container .section-1 #titulos-principales h2 {
+    font-size: 25px !important;   
+    font-weight: 520; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #191918;                      
+}
+
+.main-section video {
+    width: 41vw;
+    margin-left: 0; 
+    padding-left: 5vw;        
+    align-self: flex-end; 
+}
+
+/* Estilos de los Botones de Acción */
+.button1 > .obtener-notion{
+    background-color: #0582ff; 
+    color: white;             
+    border-radius: 5px; 
+    font-size: 18px; 
+    font-weight: 500;
+    width: 217px;  
+    height: 45px;            
+    cursor: pointer;         
+    border: none;            
+}
+
+.button1 > .solicitar-demo{
+    background-color: #ebf5fe; 
+    color: #087fe7;            
+    border-radius: 5px;   
+    font-size: 18px;
+    font-weight: 500;
+    width: 177px;     
+    height: 45px;  
+    border-color: none;            
+    border: none;              
+}
+
+.button1 > .obtener-notion:hover{
+    background-color: #045ac3; 
+}
+
+.button1 > .solicitar-demo:hover{
+    background-color: #d6e1f5; 
+}
+
+/* Sección de logos de empresas */
+.teams-work-notion {
+    display: flex;           
+    flex-direction: column;  
+    align-items: flex-start; 
+    margin-top: 15px;       
+    text-align: left;       
+    margin-left: 0;         
+    padding-left: 0;        
+}
+
+.teams-work-notion > div {
+    display: flex;          
+    gap: 40px;             
+    justify-content: flex-start; 
+    margin-top: 5px;       
+    padding-left: 0;       
+}
+
+.teams-work-notion img {
+    height: 24px;          
+    width: auto;           
+}
+
+.teams-work-notion p {
+    color: #787774;        
+    font-size: 14px;       
+}
+
+/* Carrusel de fotos */
+#carrucel-fotos {
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+#carrucel-fotos .carousel-item {
+    transition: opacity .4s ease-in-out;
+}
+
+#carrucel-fotos .carousel-image-wrapper {
+    border: 1px solid #dddddd; 
+    border-radius: 12px; 
+    overflow: hidden; 
+}
+
+#carrucel-fotos .carousel-image-wrapper img {
+    border-radius: 12px; 
+}
+
+.button-container{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+}
+
+.button-container .botones-carousel{
+    display: flex;
+    gap: 20px;
+}
+
+.carousel-control-button{
+    background-color: white;
+    border-radius: 12px;
+    height: 34px;
+    width: auto;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid #dddddd;
+}
+
+.carousel-control-button:hover{
+    background-color: #f2f2f2;
+}
+
+.button-container .botones-carousel .carousel-control-button .elements{
+    display: flex;
+    text-align: center;
+}
+
+.button-container .botones-carousel .carousel-control-button .elements {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    gap: 5px; 
+}
+
+.carousel-control-button svg {
+    display: block;
+    flex-shrink: 0;
+}
+
+.carousel-control-button p {
+    margin: 0;
+    line-height: 1; 
+}
+
+/* Estilo general para las secciones 2 a 6*/
+.section-2{
+    margin-top: 12vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.section-2 .cabecera{
+    display: flex;
+    width: 100%;
+    margin: 0;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section-2 .cabecera #left-items {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 50%;
+    margin-right: 2vw;
+}
+
+.section-2 .cabecera #left-items p{
+    font-size: 18px;
+    font-weight: 500;
+    color: #615d59;
+    margin: 0;
+    max-width: 560px;
+}
+
+.section-2 .cabecera #left-items a{
+    font-size: 18px;
+    font-weight: 600;
+    color: #0582ff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.section-2 .cabecera #left-items > h1{
+    font-size: 60px;
+    font-weight: 600;
+    max-height: 300px;
+    min-width: 600px;
+}
+
+.section-2 .cabecera #left-items a:hover{
+    text-decoration-line: underline;
+}
+
+.section-2 .cabecera #right-items{
+    display: flex;
+    width: 50%;
+    height: 50%;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 29px;
+    
+}
+
+.section-2 .cabecera #right-items ul {
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+    display: flex;
+    flex-direction: row; 
+    gap: 29px; 
+}
+
+.section-2 .cabecera #right-items ul li {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+    gap: 12px; 
+}
+
+.section-2 .cabecera #right-items ul li span{
+    font-size: 16px !important;
+
+}
+
+.section-2 .cabecera #right-items video {
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 12px; 
+}
+
+.section-2 .cabecera #right-items #black,
+.section-2 .cabecera #right-items #gray {
+    display: block;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 550;
+}
+
+.section-2 .cabecera #right-items #black {
+    color: #191918;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 550;
+}
+
+.section-2 .cabecera #right-items #gray {
+    color: #615d59;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 550;
+}
+
+.section-2 .video-1 > div{
+    display: flex;
+    margin: 0;
+    width: 100%;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.section-2 .video-1 > div video{
+    width: 100%;
+    max-width: 1252px;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* Estilos de los iconos que aparecen en el pie de cada sección*/
+.footer-section .icons-footer{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.footer-section {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0;
+    margin: 0;
+    padding-top: 20px;
+}
+
+#icons-footer {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px; 
+}
+
+#icons-footer h4 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#icons-footer ul {
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+    display: flex;
+    flex-direction: row; 
+    justify-content: flex-start;
+    gap: 10px; 
+}
+
+#icons-footer ul li {
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+}
+
+#icons-footer ul li img {
+    width: 24px;
+    height: auto;
+}
+
+#icons-footer ul li span {
+    font-size: 16px;
+}
+
+/* Estilos de la Sección de la cita de Forbes*/
+.quote{
+    background-color: #f6f5f4;
+    padding: 60px;
+    max-width: fit-content;
+    max-height: 315.54px;
+    margin: 40px auto; 
+    margin-top: 20vh;
+    padding: 60px;
+    transform: rotate(-3deg);
+    text-align: center; 
+}
+
+.quote blockquote img{
+    display: flex;
+    max-width: 64px;
+    margin: 0;
+    position: absolute;
+    top: -50px;
+}
+
+.quote blockquote {
+    display: flex;
+    font-size: 43px;
+    font-weight: 180;
+    max-width: 700px;
+    max-height: 100px;
+    padding: 60px;
+    word-spacing: 2px;
+    line-height: 1;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.quote figcaption {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.quote figcaption img {
+    width: 66.07px; 
+    height:  20.39px;
+}
+
+.section-4{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 12vh;
+}
+
+.section-4 header{
+    display: flex;
+    align-content: flex-end;
+}
+
+.section-4 header h1{
+    max-width: 640px;
+    height: auto;
+    font-size: 60px;
+    font-weight: 700;
+    word-spacing: 2px;
+    line-height: 1;
+
+}
+
+/* Estilo de la sección de funcionalidades de notion */
+
+.section-4 div{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.section-4 div ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0;
+    padding-top: 40px;
+}
+
+.section-4 div ul li{
+    display: flex;
+    flex-direction: column;
+}
+
+.section-4 div ul li img{
+    max-width: 80px;
+    max-height: 80px;
+}
+
+.section-4 div ul li span h4{
+    font-size: 26px;
+    font-weight: 600;
+    margin-top: 5px;
+    max-width: 292px;
+}
+
+.section-4 div ul li span p{
+    max-width: 262px;
+    font-weight: 550;
+    color: #787774;
+    font-size: 17px;
+}
+
+/* Estilo de la sección para obtener notion  */
+
+.section-5 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 12vh;
+}
+
+.section-5 header h1{
+    font-size: 60px;
+    font-weight: 650;
+}
+
+.section-5 .container{
+    display: flex;
+    flex-direction: row;
+}
+
+.section-5 .container .left-div{
+    background-color: #f6f5f4;
+    padding: 25px;
+    margin-top: 30px;
+    margin-right: 10px;
+    border-radius: 12px;
+    padding-bottom: 0;
+    padding-right: 0;
+}
+
+
+
+.section-5 .container .right-div{
+    background-color: #f6f5f4;
+    padding: 25px;
+    padding-bottom: 0;
+    padding-right: 0;
+    margin-top: 30px;
+    margin-left: 10px;
+    border-radius: 12px;
+}
+
+.section-5 .container .left-div img,
+.section-5 .container .right-div img {
+    width: 530px;
+    margin-top: 40px;
+    float: right;
+    margin-right: 0;
+    padding-right: 0;
+}
+
+.section-5 .container .left-div h1{
+    font-size: 40px;
+    font-weight: 650;
+}
+
+.section-5 .container .right-div h1{
+    font-size: 40px;
+    font-weight: 650;
+}
+.section-5 .container .left-div #azul-oscuro{
+    background-color: #0582ff;
+    border: none;
+    padding: 10px;
+    border-radius: 12px;
+    color: white;
+    font-weight: 600;
+}
+
+.section-5 .container .left-div #azul-oscuro:hover{
+    background-color: #045ac3;
+}
+.section-5 .container .right-div #azul-oscuro:hover{
+    background-color: #045ac3;
+}
+
+.section-5 .container .left-div #azul-claro:hover{
+    background-color: #eaeaea;
+}
+.section-5 .container .right-div #azul-claro:hover{
+    background-color: #eaeaea;
+}
+
+
+
+.section-5 .container .right-div #azul-oscuro{
+    background-color: #0582ff;
+    border: none;
+    padding: 10px;
+    border-radius: 12px;
+    color: white;
+    font-weight: 600;
+}
+
+.section-5 .container .left-div #azul-claro{
+    background-color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 12px;
+    color: #191918;
+    font-weight: 600;
+}
+
+.section-5 .container .right-div #azul-claro{
+    background-color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 12px;
+    color: #191918;
+    font-weight: 600;
+}
+
+/* Estilos sacados de figma */
+
+.plugin-file-cover-1-child {
+    position: absolute;
+    top: 66px;
+    left: 0px;
+    background-color: #fff;
+    border: 0.5px solid #909090;
+    box-sizing: border-box;
+    width: 1920px;
+    height: 434px;
+}
+
+.plugin-file-cover-1 {
+    width: 100%;
+    position: relative;
+    background-color: #fff;
+    height: 500px;
+    overflow: hidden;
+    text-align: left;
+    font-size: 13.5px;
+    color: #000;
+    font-family: Inter;
+}
+
+.group-child {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #fff;
+    width: 289px;
+    height: 274px;
+}
+.no-vendemos-ni {
+    position: absolute;
+    top: 161.62px;
+    left: 0.33px;
+    display: inline-block;
+    width: 289px;
+    height: 34.6px;
+}
+.clip-path-group {
+    position: absolute;
+    height: 12.96%;
+    width: 47.18%;
+    top: 0.18%;
+    right: 52.7%;
+    bottom: 86.86%;
+    left: 0.12%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+}
+.group-icon {
+    width: 18px;
+    position: relative;
+    height: 18px;
+}
+.group-icon1 {
+    width: 15px;
+    position: relative;
+    height: 13px;
+}
+.group-icon2 {
+    width: 16px;
+    position: relative;
+    height: 16px;
+    object-fit: cover;
+}
+.group-parent {
+    position: absolute;
+    top: 65.12px;
+    left: 3.33px;
+    width: 149px;
+    height: 16.4px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+}
+.rectangle-parent {
+    position: absolute;
+    top: 138.46px;
+    left: 325.67px;
+    width: 289.3px;
+    height: 274px;
+}
+.group-item {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #fff;
+    width: 939px;
+    height: 229.7px;
+}
+.group-inner {
+    position: absolute;
+    top: 0px;
+    left: 722.25px;
+    background-color: #fff;
+    width: 216.8px;
+    height: 197.5px;
+}
+.enterprise {
+    position: absolute;
+    top: 25.9px;
+    left: 722px;
+    display: flex;
+    align-items: center;
+    width: 216.8px;
+    height: 17px;
+}
+.descubre-ms {
+    position: absolute;
+    top: 180.76px;
+    left: 722px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    width: 216.8px;
+    height: 17px;
+}
+.notion-para {
+    position: absolute;
+    top: 0.89px;
+    left: 722px;
+    font-weight: 600;
+    color: #191918;
+    display: flex;
+    align-items: center;
+    width: 216.8px;
+    height: 17px;
+}
+.pequea-empresa {
+    position: absolute;
+    top: 50.9px;
+    left: 722px;
+    display: flex;
+    align-items: center;
+    width: 216.8px;
+    height: 17px;
+}
+.personal {
+    position: absolute;
+    top: 75.9px;
+    left: 722px;
+    display: flex;
+    align-items: center;
+    width: 216.8px;
+    height: 17px;
+}
+.rectangle-div {
+    position: absolute;
+    top: 0px;
+    left: 481.5px;
+    background-color: #fff;
+    width: 216.8px;
+    height: 197.5px;
+}
+.centro-de-ayuda {
+    position: absolute;
+    top: 25px;
+    left: 482px;
+    display: flex;
+    align-items: center;
+    width: 216.8px;
+    height: 17px;
+}
+.integraciones {
+    position: absolute;
+    top: 125.01px;
+    left: 482px;
+    display: flex;
+    align-items: center;
+    width: 216.8px;
+    height: 17px;
+}
+.plantillas {
+    position: absolute;
+    top: 150.01px;
+    left: 482px;
+    display: flex;
+    align-items: center;
+    width: 216.8px;
+    height: 17px;
+}
+.afiliados {
+    position: absolute;
+    top: 175.01px;
+    left: 482px;
+    display: flex;
+    align-items: center;
+    width: 216.8px;
+    height: 17px;
+}
+.recursos {
+    position: absolute;
+    top: 0px;
+    left: 482px;
+    font-weight: 600;
+    color: #191918;
+    display: flex;
+    align-items: center;
+    width: 216.8px;
+    height: 17px;
+}
+.precios {
+    position: absolute;
+    top: 50px;
+    left: 482px;
+    display: flex;
+    align-items: center;
+    width: 216.8px;
+    height: 17px;
+}
+.comunidad {
+    position: absolute;
+    top: 100.01px;
+    left: 482px;
+    display: flex;
+    align-items: center;
+    width: 216.8px;
+    height: 17px;
+}
+.blog {
+    position: absolute;
+    top: 75.01px;
+    left: 482px;
+    display: flex;
+    align-items: center;
+    width: 216.8px;
+    height: 17px;
+}
+.group-child1 {
+    position: absolute;
+    top: 0px;
+    left: 240.75px;
+    background-color: #fff;
+    width: 216.8px;
+    height: 197.5px;
+}
+.ios-y-android {
+    position: absolute;
+    top: 25px;
+    left: 241px;
+    display: flex;
+    align-items: center;
+    width: 216.8px;
+    height: 17px;
+}
+.descargar {
+    position: absolute;
+    top: 0px;
+    left: 241px;
+    font-weight: 600;
+    color: #191918;
+    display: flex;
+    align-items: center;
+    width: 216.8px;
+    height: 17px;
+}
+.mac-y-windows {
+    position: absolute;
+    top: 50px;
+    left: 241px;
+    display: flex;
+    align-items: center;
+    width: 216.8px;
+    height: 17px;
+}
+.web-clipper {
+    position: absolute;
+    top: 100.01px;
+    left: 241px;
+    display: flex;
+    align-items: center;
+    width: 216.8px;
+    height: 17px;
+}
+.calendario {
+    position: absolute;
+    top: 75.01px;
+    left: 241px;
+    display: flex;
+    align-items: center;
+    width: 216.8px;
+    height: 17px;
+}
+.group-child2 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #fff;
+    width: 216.8px;
+    height: 197.5px;
+}
+.concenos {
+    position: absolute;
+    top: 25px;
+    left: 0px;
+    display: flex;
+    align-items: center;
+    width: 216.8px;
+    height: 17px;
+}
+.trminos-de-uso {
+    position: absolute;
+    top: 125.01px;
+    left: 0px;
+    display: flex;
+    align-items: center;
+    width: 216.8px;
+    height: 17px;
+}
+.empresa {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-weight: 600;
+    color: #191918;
+    display: flex;
+    align-items: center;
+    width: 216.8px;
+    height: 17px;
+}
+.oportunidades-laborales {
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    display: flex;
+    align-items: center;
+    width: 216.8px;
+    height: 17px;
+}
+.estado {
+    position: absolute;
+    top: 100.01px;
+    left: 0px;
+    display: flex;
+    align-items: center;
+    width: 216.8px;
+    height: 17px;
+}
+.seguridad {
+    position: absolute;
+    top: 75.01px;
+    left: 0px;
+    display: flex;
+    align-items: center;
+    width: 216.8px;
+    height: 17px;
+}
+.rectangle-group {
+    position: absolute;
+    top: 141px;
+    left: 655px;
+    width: 939px;
+    height: 229.7px;
+    font-size: 15px;
+    color: #31302e;
+}
+.notion-labs-inc {
+    position: absolute;
+    top: 396px;
+    left: 326px;
+    display: inline-block;
+    width: 163px;
+    height: 1px;
+}
+.configuracin-de-cookies {
+    position: absolute;
+    top: 355px;
+    left: 326px;
+    color: #615d59;
+    display: inline-block;
+    width: 163px;
+    height: 1px;
+}
+
+/* Hata aqui con ayuda de figma */
+
+
+/* Botón de selección de idioma  */
+.language-selector {
+    position: absolute;
+    top: 110px; 
+    display: block;
+    z-index: 10;
+}
+
+.language-selector select {
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    padding: 8px 12px;
+    border: 1px solid #909090;
+    border-radius: 6px;
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    appearance: none; 
+}
